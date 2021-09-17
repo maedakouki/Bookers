@@ -1,0 +1,25 @@
+<body>
+  <% flash.each do |key, value| %>
+    <p class="alert alert-<%= key %>">
+      <%= value %>
+    </p>
+<% end %>
+    <p id="notice"></p>
+
+<p>
+  Title:
+  <%= @book.title %>
+</p>
+
+<p>
+  Body:
+  <%= @book.body %>
+</p>
+
+<%= link_to "edit", edit_book_path(@book.id) %>
+<%= link_to "Back", books_path %>
+
+
+  
+
+</body>
